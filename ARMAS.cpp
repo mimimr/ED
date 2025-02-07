@@ -13,8 +13,8 @@ struct Arma {
 int main() {
     // Definir las armas disponibles
     Arma armas[] = {
-        {"Espada decente", 10, 5},
-        {"Escudo magico", 15, 2},
+        {"Espada de tu tio", 10, 5},
+        {"Escudo anti bendiciones", 15, 2},
         {"Arco bravo", 20, 7}
     };
 
@@ -26,12 +26,12 @@ int main() {
     int* oroActual = &oroJugador; // Puntero a oroJugador
 
     while (true) { // Bucle principal del juego
-        cout << "\nBienvenido a la tienda de armas" << endl;
+        cout << "\nBienvenido a la tienda de Doña Pelos" << endl;
         cout << "Oro disponible: " << *oroActual << " monedas de oro" << endl;
 
         // Mostrar las armas disponibles
         Arma* armasEnVenta = armas;
-        cout << "Armas disponibles:" << endl;
+        cout << "Chequese lo que tenemos:" << endl;
         for (int i = 0; i < cantidadArmas; i++) {
             cout << i + 1 << ". " << armasEnVenta[i].nombre << " - Precio: "
                 << armasEnVenta[i].precio << " - Daño: " << armasEnVenta[i].danio << endl;
@@ -39,8 +39,8 @@ int main() {
 
         // Mostrar el menú de opciones
         cout << "\nOpciones:" << endl;
-        cout << "1. Comprar arma" << endl;
-        cout << "2. Salir" << endl;
+        cout << "1. ¿Si va a comprar?" << endl;
+        cout << "2. ¿O no?" << endl;
         cout << "Ingrese una opcion: ";
         int opcion;
         cin >> opcion;
@@ -48,13 +48,13 @@ int main() {
         switch (opcion) {
         case 1: {
             // Comprar arma
-            cout << "\nSeleccione el numero del arma que desea comprar: ";
+            cout << "\nLlevele que va a comprar: ";
             int seleccion;
             cin >> seleccion;
 
             // Validar la entrada
             if (seleccion < 1 || seleccion > cantidadArmas) {
-                cout << "Opcion no valida. Intente de nuevo." << endl;
+                cout << "Por favor ese nooo" << endl;
                 break;
             }
 
@@ -68,7 +68,7 @@ int main() {
                     << armaSeleccionada.precio << " monedas de oro." << endl;
             }
             else {
-                cout << "No tienes suficiente oro para comprar " << armaSeleccionada.nombre << "." << endl;
+                cout << "Pobre no tiene dinero JAJAJA " << armaSeleccionada.nombre << "." << endl;
             }
             break;
         }
@@ -76,7 +76,7 @@ int main() {
             cout << "Gracias por visitar la tienda ¡BYE BYE!" << endl;
             return 0;
         default:
-            cout << "Opción no valida. Intente de nuevo." << endl;
+            cout << "Chale ni modo no se pudo" << endl;
         }
     }
     return 0;
