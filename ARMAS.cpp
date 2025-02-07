@@ -2,82 +2,74 @@
 #include <string>
 
 using namespace std;
-
-// Definición de la estructura Arma
-struct Arma {
+//La estructura :D
+struct arma {
     string nombre;
     int precio;
     int danio;
 };
-
-int main() {
-    // Definir las armas disponibles
-    Arma armas[] = {
-        {"Espada de tu tio", 10, 5},
-        {"Escudo anti bendiciones", 15, 2},
-        {"Arco bravo", 20, 7}
+int main()
+{
+    //Poner armas disponibles
+    arma armas[] = {
+        {"Espada de tu tio",10,5},
+        {"Escudo anti bendiciones",15,2},
+        {"Arco bravo",20,7}
     };
+    //Numero de armas disponibles
+    int cantidadArmas = sizeof(armas) / sizeof(arma);
 
-    // Calcular el número de armas disponibles
-    int cantidadArmas = sizeof(armas) / sizeof(Arma);
-
-    // Definir el oro inicial del jugador
+    //Oro del jugador
     int oroJugador = 30;
-    int* oroActual = &oroJugador; // Puntero a oroJugador
+    int* oroActual = &oroJugador; //*& Son los punteros
 
-    while (true) { // Bucle principal del juego
-        cout << "\nBienvenido a la tienda de Doña Pelos" << endl;
-        cout << "Oro disponible: " << *oroActual << " monedas de oro" << endl;
+    while(true){//Bucle principal
+        cout << "Bienvenido a la tienda de Doña Pelos" << endl;
+        cout << "Oro disponible: " << *oroActual << "Moneditas" << endl;
 
-        // Mostrar las armas disponibles
-        Arma* armasEnVenta = armas;
-        cout << "Chequese lo que tenemos:" << endl;
+        //Armas disponibles
+        arma* armasEnVenta = armas;
+        cout << "Chequese lo que tenemos: " << endl;
         for (int i = 0; i < cantidadArmas; i++) {
-            cout << i + 1 << ". " << armasEnVenta[i].nombre << " - Precio: "
-                << armasEnVenta[i].precio << " - Daño: " << armasEnVenta[i].danio << endl;
+            cout << i + 1 << "." << armasEnVenta[i].nombre << "-Precio: " << armasEnVenta[i].nombre << "-Daño: " << armasEnVenta[i].danio << endl;
         }
-
-        // Mostrar el menú de opciones
-        cout << "\nOpciones:" << endl;
-        cout << "1. ¿Si va a comprar?" << endl;
-        cout << "2. ¿O no?" << endl;
-        cout << "Ingrese una opcion: ";
+        //Ver el menú :D
+        cout << "Opciones: " << endl;
+        cout << "¿Si va a comprar?" << endl;
+        cout << "¿O no?" << endl;
+        cout << "Ingresa la opcion";
         int opcion;
         cin >> opcion;
 
         switch (opcion) {
-        case 1: {
-            // Comprar arma
-            cout << "\nLlevele que va a comprar: ";
+        case 1: { //Compra el arma ci
+            cout << "Llevele que va a comprar:";
             int seleccion;
             cin >> seleccion;
 
-            // Validar la entrada
-            if (seleccion < 1 || seleccion > cantidadArmas) {
+            //Hora de la entrada
+            if (seleccion < 1 || seleccion> cantidadArmas) {
                 cout << "Por favor ese nooo" << endl;
                 break;
             }
-
-            // Obtener el arma seleccionada
-            Arma armaSeleccionada = armasEnVenta[seleccion - 1];
-
-            // Verificar si el jugador tiene suficiente oro
+            //Arma seleccionada
+            arma armaSeleccionada = armasEnVenta[seleccion - 1];
+            //Ver si el jugador tiene dinero
             if (*oroActual >= armaSeleccionada.precio) {
                 *oroActual -= armaSeleccionada.precio;
-                cout << "Has comprado " << armaSeleccionada.nombre << " por "
-                    << armaSeleccionada.precio << " monedas de oro." << endl;
+                cout << "Has comprado" << armaSeleccionada.nombre << "por" << armaSeleccionada.precio << "Moneditas de oro" << endl;
             }
             else {
-                cout << "Pobre no tiene dinero JAJAJA " << armaSeleccionada.nombre << "." << endl;
+                cout << "Pobre no tienes dinero JAJAJA" << armaSeleccionada.nombre << "." << endl;
             }
             break;
         }
         case 2:
-            cout << "Gracias por visitar la tienda ¡BYE BYE!" << endl;
+            cout << "Gracias por su visita en la tienda BYE BYE!!" << endl;
             return 0;
-        default:
-            cout << "Chale ni modo no se pudo" << endl;
+        defaut:
+            cout << "Ni modo no se pudo" << endl;
         }
-    }
+        }
     return 0;
-}
+    }
