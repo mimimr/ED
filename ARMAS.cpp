@@ -14,7 +14,7 @@ int main() {
     // Definir las armas disponibles
     Arma armas[] = {
         {"Espada oxidada", 10, 5},
-        {"Escudo mágico", 15, 2},
+        {"Escudo magico", 15, 2},
         {"Arco élfico", 20, 7}
     };
 
@@ -41,20 +41,20 @@ int main() {
         cout << "\nOpciones:" << endl;
         cout << "1. Comprar arma" << endl;
         cout << "2. Salir" << endl;
-        cout << "Ingrese una opción: ";
+        cout << "Ingrese una opcion: ";
         int opcion;
         cin >> opcion;
 
         switch (opcion) {
         case 1: {
             // Comprar arma
-            cout << "\nSeleccione el número del arma que desea comprar: ";
+            cout << "\nSeleccione el numero del arma que desea comprar: ";
             int seleccion;
             cin >> seleccion;
 
             // Validar la entrada
             if (seleccion < 1 || seleccion > cantidadArmas) {
-                cout << "Opción inválida. Intente de nuevo." << endl;
+                cout << "Opcion no valida. Intente de nuevo." << endl;
                 break;
             }
 
@@ -73,10 +73,10 @@ int main() {
             break;
         }
         case 2:
-            cout << "Gracias por visitar la tienda. ¡Hasta luego!" << endl;
+            cout << "Gracias por visitar la tienda ¡BYE BYE!" << endl;
             return 0;
         default:
-            cout << "Opción inválida. Intente de nuevo." << endl;
+            cout << "Opción no valida. Intente de nuevo." << endl;
         }
     }
     return 0;
