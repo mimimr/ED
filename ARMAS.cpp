@@ -7,15 +7,15 @@ using namespace std;
 struct Arma {
     string nombre;
     int precio;
-    int daño;
+    int danio;
 };
 
 int main() {
     // Definir las armas disponibles
     Arma armas[] = {
-        {"Espada oxidada", 10, 5},
+        {"Espada decente", 10, 5},
         {"Escudo magico", 15, 2},
-        {"Arco élfico", 20, 7}
+        {"Arco bravo", 20, 7}
     };
 
     // Calcular el número de armas disponibles
@@ -34,7 +34,7 @@ int main() {
         cout << "Armas disponibles:" << endl;
         for (int i = 0; i < cantidadArmas; i++) {
             cout << i + 1 << ". " << armasEnVenta[i].nombre << " - Precio: "
-                << armasEnVenta[i].precio << " - Daño: " << armasEnVenta[i].daño << endl;
+                << armasEnVenta[i].precio << " - Daño: " << armasEnVenta[i].danio << endl;
         }
 
         // Mostrar el menú de opciones
