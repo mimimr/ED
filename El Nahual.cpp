@@ -11,7 +11,10 @@ struct enemigos { // estructura del enemigo
         salud = salud - dano;
         if (salud <= 0) {
             salud = 0;
-            cout<<nombre<<"ha recibido"
+            cout << nombre << "fue derrotado" << endl;
+        }
+        else {
+            cout << nombre << "ha recibido" << dano << "de daño.salud restante:" << endl;
         }
 
     }
@@ -29,4 +32,3 @@ int main()
     cout << "Nivel: " << bicho1.niveles << endl;
     cout << "Salud: " << bicho1.salud << endl;
 }
-
