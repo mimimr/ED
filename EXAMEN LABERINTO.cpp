@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-// Definir el tamaño de las filas y columnas
+// Definir el tamaño de las filas y columnas que se van a ocupar
 const int FILAS = 6;
 const int COLUMNAS = 4;
 
@@ -20,6 +20,7 @@ int laberinto[FILAS][COLUMNAS] = {
 // Función recursiva para resolver el laberinto
 bool resolverLaberinto(int x, int y) {
     // Verificar si la posición actual está fuera de los límites del laberinto
+    // Uso de IF, FALSE, TRUE
     if (x < 0 || x >= FILAS || y < 0 || y >= COLUMNAS) {
         return false;
     }
@@ -39,10 +40,10 @@ bool resolverLaberinto(int x, int y) {
     laberinto[x][y] = 3;
 
     // Intentar moverse en las cuatro direcciones posibles
-    if (resolverLaberinto(x + 1, y)) return true; // Moverse hacia abajo
-    if (resolverLaberinto(x - 1, y)) return true; // Moverse hacia arriba
-    if (resolverLaberinto(x, y + 1)) return true; // Moverse hacia la derecha
-    if (resolverLaberinto(x, y - 1)) return true; // Moverse hacia la izquierda
+    if (resolverLaberinto(x + 1, y)) return true; // Mueve para abajo
+    if (resolverLaberinto(x - 1, y)) return true; // Mueve para arriba
+    if (resolverLaberinto(x, y + 1)) return true; // Mueve para la derecha
+    if (resolverLaberinto(x, y - 1)) return true; // Mueve para la izquierda
 
     // Si no se encuentra la salida, desmarcar la posición actual
     laberinto[x][y] = 0;
