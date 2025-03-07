@@ -22,7 +22,7 @@ Tesoro encontrarTesoro(string tipo, int* cantidadMonedasPesos, int poderDiamanti
 
 int main() {
     // Crear una variable para la cantidad de monedas de oro
-    int cantidadBaro = 100;
+    int cantidadBaro = 500;
 
     // Crear un tesoro utilizando la función encontrarTesoro
     Tesoro miPreciosa = encontrarTesoro("Tesoro del Messi", &cantidadBaro, 50);
