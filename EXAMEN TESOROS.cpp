@@ -29,8 +29,8 @@ int main() {
 
     // Revelar las caraceristcas el tesoro encontrado
     cout << "Tipo de Tesorito: " << miPreciosa.tipo << endl;
-    cout << "Cantidad de Monedas de Oro: " << *miPreciosa.cantidadMonedasPesos << endl;
-    cout << "Poder del Objeto: " << miPreciosa.poderDiamantito << endl;
+    cout << "Cantidad de Morralla: " << *miPreciosa.cantidadMonedasPesos << endl;
+    cout << "Poder del Fierro oxidado: " << miPreciosa.poderDiamantito << endl;
 
     return 0;
 }
