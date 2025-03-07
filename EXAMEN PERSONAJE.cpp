@@ -1,40 +1,38 @@
+//Ejercicio I: Creacion de un personaje principal
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-// Definicion de la estructura del personaje
-struct Personaje {  // Aqui esta la biblioteca y los nombres
+// La estructura del personaje
+struct Personaje { // Biblioteca
     string nombre;
     int nivel;
-    string clase;
-    int vida;
-    int ataque;
-    int defensa;
+    int puntosVida;
+    int puntosAtaque;
 };
 
-// Momento de crear personajes
-Personaje crearPersonaje(string nombre, int nivel, string clase, int vida, int ataque, int defensa) {
+// Función para crear un personaje
+Personaje crearPersonaje(string nombre, int nivel, int puntosVida, int puntosAtaque) {
     Personaje nuevoPersonaje;
     nuevoPersonaje.nombre = nombre;
     nuevoPersonaje.nivel = nivel;
-    nuevoPersonaje.clase = clase;
-    nuevoPersonaje.vida = vida;
-    nuevoPersonaje.ataque = ataque;
-    nuevoPersonaje.defensa = defensa;
+    nuevoPersonaje.puntosVida = puntosVida;
+    nuevoPersonaje.puntosAtaque = puntosAtaque;
     return nuevoPersonaje;
 }
 
 int main() {
-    // Crear un personaje utilizando la función crearPersonaje
-    Personaje miPersonaje = crearPersonaje("Federico III", 20, "Chaman", 100, 50, 30);
+    // Hora de crear el personaje usando la funcion crearPersonaje
+    Personaje miPersonaje = crearPersonaje("Pepito FEderico", 10, 100, 50);
 
-    // Mostrar los atributos del personaje en la consola
+    // Los atributos del personaje mostrado en la consola
     cout << "Nombre: " << miPersonaje.nombre << endl;
     cout << "Nivel: " << miPersonaje.nivel << endl;
-    cout << "Clase: " << miPersonaje.clase << endl;
-    cout << "Vida: " << miPersonaje.vida << endl;
-    cout << "Ataque: " << miPersonaje.ataque << endl;
-    cout << "Defensa: " << miPersonaje.defensa << endl;
+    cout << "Puntos de Vida: " << miPersonaje.puntosVida << endl;
+    cout << "Puntos de Ataque: " << miPersonaje.puntosAtaque << endl;
 
     return 0;
 }
+
