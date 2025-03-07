@@ -4,33 +4,33 @@
 
 using namespace std;
 
-// Definición de la estructura Tesoro
+// Estructura del Tesoro
 struct Tesoro {
     string tipo;
-    int* cantidadMonedasOro; // Puntero a entero para la cantidad de monedas de oro
-    int poderObjeto;
+    int* cantidadMonedasPesos; // Puntero para la cantidad ed monedas
+    int poderDiamantito;
 };
 
-// Función para encontrar un tesoro
-Tesoro encontrarTesoro(string tipo, int* cantidadMonedasOro, int poderObjeto) {
+// La funcion para encontrar tesoros
+Tesoro encontrarTesoro(string tipo, int* cantidadMonedasPesos, int poderDiamantito) {
     Tesoro nuevoTesoro;
     nuevoTesoro.tipo = tipo;
-    nuevoTesoro.cantidadMonedasOro = cantidadMonedasOro;
-    nuevoTesoro.poderObjeto = poderObjeto;
+    nuevoTesoro.cantidadMonedasPesos = cantidadMonedasPesos;
+    nuevoTesoro.poderDiamantito = poderDiamantito;
     return nuevoTesoro;
 }
 
 int main() {
     // Crear una variable para la cantidad de monedas de oro
-    int cantidadMonedas = 100;
+    int cantidadBaro = 100;
 
     // Crear un tesoro utilizando la función encontrarTesoro
-    Tesoro miTesoro = encontrarTesoro("Cofre Antiguo", &cantidadMonedas, 50);
+    Tesoro miPreciosa = encontrarTesoro("Tesoro del Messi", &cantidadBaro, 50);
 
-    // Mostrar los detalles del tesoro en la consola
-    cout << "Tipo de Tesoro: " << miTesoro.tipo << endl;
-    cout << "Cantidad de Monedas de Oro: " << *miTesoro.cantidadMonedasOro << endl;
-    cout << "Poder del Objeto: " << miTesoro.poderObjeto << endl;
+    // Revelar las caraceristcas el tesoro encontrado
+    cout << "Tipo de Tesorito: " << miPreciosa.tipo << endl;
+    cout << "Cantidad de Monedas de Oro: " << *miPreciosa.cantidadMonedasPesos << endl;
+    cout << "Poder del Objeto: " << miPreciosa.poderDiamantito << endl;
 
     return 0;
 }
