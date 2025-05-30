@@ -1,46 +1,39 @@
-#include <iostream> // Librerias y marcos
-using namespace std;
+//Ejercicio 1 / Practica 1
 
-//Variables globales y prototipo de funcion
-double pedirDistancia();
-double pedirTiempo();
-double calcularVelocidad(double distancia, double tiempo);
-void mostrarVelocidad(double velocidad);
+#include <iostream>
+using namespace std; // entada / salida cin - cout
+
+float pedirDistancia();
+float pedirTiempo();
+float calcularVelocidad(float distancia, float tiempo);
+void mostrarVelocidad(float velocidad); // se usa void cuand quiero declarar una variable NO calcular o realizar una opercacion
 
 int main()
-{
-    double distancia, tiempo, velocidad;
-    distancia = pedirDistancia();
-    tiempo = pedirTiempo();
-    velocidad = calcularVelocidad(distancia, tiempo);
-    mostrarVelocidad;
-
-    return 0;
-    
-}
-//Funcion para pedir distancia
-double  pedirDistancia() {
-    double d;
-    cout << "Ingrese la distancia recorrida (en metros): ";
-    cin >> d;
-    return d;
+{ 
+	float distancia = pedirDistancia();
+	float tiempo = pedirTiempo();
+	float velocidad = calcularVelocidad(distancia, tiempo);
+	mostrarVelocidad(velocidad);
+	return 0;
 }
 
-//Funciones para pedir el tiempo
-double pedirTiempo() {
-    double t;
-    cout << "Ingrese el tiempo (en segundos): ";
-    cin >> t;
-    return t;
+float pedirDistancia() {
+	float d;
+	cout << "Distancia en metros: ";
+	cin >> d;
+	return d;
 }
-//Funcion para calcular la velocidad
-double calcularVelocidad(double distancia, double tiempo) {
-   
-    cout << "Calcular la velocidad: v = d/t " << distancia << "m/" << tiempo << "s" << endl;
-    return distancia / tiempo;
+float pedirTiempo() {
+	float t;
+	cout << "Tiempo en segundos";
+	cin >> t;
+	return t;
+}
+float calcularVelocidad(float distancia, float tiempo) {
+
 
 }
-//Funcion para mostrar el resultado
-void mostrarVelocidad(double velocidad) {
-    cout << "La velocidad del movil es: " << velocidad << "m/s" << endl;
+void mostrarVelocidad(float velocidad) {
+
+
 }
