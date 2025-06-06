@@ -12,9 +12,9 @@ int main()
 {
     //Poner armas disponibles
     arma armas[] = {
-        {"Espada de tu tio",10,5},
-        {"Escudo anti bendiciones",15,2},
-        {"Arco bravo",20,7}
+        {"Espada oxidada",10,13},
+        {"Escudo magico",20,17},
+        {"Arco elfico",15,15}
     };
     //Numero de armas disponibles
     int cantidadArmas = sizeof(armas) / sizeof(arma);
@@ -23,7 +23,7 @@ int main()
     int oroJugador = 30;
     int* oroActual = &oroJugador; //*& Son los punteros
 
-    while(true){//Bucle principal
+    while (true) {//Bucle principal
         cout << "Bienvenido a la tienda de Doña Pelos" << endl;
         cout << "Oro disponible: " << *oroActual << "Moneditas" << endl;
 
@@ -35,9 +35,9 @@ int main()
         }
         //Ver el menú :D
         cout << "Opciones: " << endl;
-        cout << "¿Si va a comprar?" << endl;
-        cout << "¿O no?" << endl;
-        cout << "Ingresa la opcion";
+        cout << "¿Vas a comprar?" << endl;
+        cout << "¿Si o no?" << endl;
+        cout << "SI O NO";
         int opcion;
         cin >> opcion;
 
@@ -70,6 +70,6 @@ int main()
         defaut:
             cout << "Ni modo no se pudo" << endl;
         }
-        }
-    return 0;
     }
+    return 0;
+}
