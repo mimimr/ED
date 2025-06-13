@@ -28,6 +28,7 @@ int main()
     while (true) {
         cout << "Bienvenido a la tienda de señora Pelos" << endl;
         cout << "Oro disponible: " << *oroActual << endl;
+        cout << "Inventario de la tienda disponible" << endl;
         Arma* armaVenta = armas;
 
         for (int i = 0; i < cantidadArmas; i++) {
@@ -38,7 +39,7 @@ int main()
         cout << "1) Comprar Arma" << endl;
         cout << "2) Salir de la tienda" << endl;
         cin >> opcion;
-        switch(opcion) {
+        switch (opcion) {
         case 1:
             cout << "Seleccione un arma: " << endl;
             break;
