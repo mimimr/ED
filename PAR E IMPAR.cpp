@@ -6,7 +6,10 @@ bool Impar(int num);
 
 int main()
 {
-	int numero = 5; // Se ingresa un numero
+	int numero;
+
+	cout << "Ingrse un numero entero: ";
+	cin >> numero;
 
 	if (Impar(numero)) 
 	{ 
