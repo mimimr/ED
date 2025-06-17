@@ -1,41 +1,35 @@
+
 #include <iostream>
 using namespace std;
-// Declaracion de funciones
-// Funcion para verificar si un numero es par
 bool Par(int num);
-// Funcion para verificar si un numero es impar
 bool Impar(int num);
 
 int main()
 {
-	int numero = 5;
-	if (Impar(numero))
-	{
-		cout << numero << "es impar" << endl;
+	int numero = 5; // Se ingresa un numero
+
+	if (Impar(numero)) 
+	{ 
+		cout << numero << " Es impar " << endl;
 	}
-	else
-	{
-		cout << numero << "es par" << endl;
+	else {
+		cout << numero << " Es par " << endl;
 	}
-	return 0;
 }
-// funcion para ver si el numero es par
-bool Par(int num)
+bool Par(int num) 
 {
-	if (num == 0)
+	if (num == 0) 
 	{
 		return true;
 	}
-	else
+	else 
 	{
 		return Impar(num - 1);
 	}
 }
-//Funcion para verificar si es impar
-bool Impar(int num)
+bool Impar(int num) 
 {
-	if (num == 0)
-	{
+	if (num == 0) {
 		return false;
 	}
 	else 
